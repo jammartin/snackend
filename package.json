@@ -1,0 +1,38 @@
+{
+  "name": "snackend",
+  "version": "0.0.0",
+  "description": "code your social network's backend in a blink",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=text mocha",
+    "prepare": "require-self",
+    "count-module": "cloc index.js lib/ configuration/ utils/",
+    "count-all": "cloc index.js lib/ configuration/ utils/ test/ examples/"
+  },
+  "author": "Johannes Martin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jammartin/snackend.git"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-busboy": "^1.2.0",
+    "koa-router": "^7.4.0",
+    "logform": "^2.1.2",
+    "mongodb": "^3.2.2",
+    "mongoose": "^5.4.6",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-files": "^1.4.0",
+    "chai-http": "^4.3.0",
+    "cloc": "^2.5.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0",
+    "require-self": "^0.2.1"
+  }
+}
