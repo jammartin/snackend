@@ -12,8 +12,8 @@ const snDefaults = {
 };
 
 function configurationHelper(options, defaults, endRecursionFor){
-    endRecursionFor = endRecursionFor === undefined ? [] : endRecursionFor;
-    defaults = defaults === undefined ? snDefaults : defaults;
+    endRecursionFor = endRecursionFor || [];
+    defaults = defaults || snDefaults;
     const optsMerger = (opts, config) => {
         Object.keys(opts).forEach( key => {
             if ( typeof opts[key] === 'object'
