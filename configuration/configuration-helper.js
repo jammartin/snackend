@@ -11,6 +11,7 @@ const snDefaults = {
     }
 };
 
+// TODO: check if endRecursionFor is needed as parameter for configurationHelper (probably legacy)
 function configurationHelper(options, defaults, endRecursionFor){
     endRecursionFor = endRecursionFor || [];
     defaults = defaults || snDefaults;

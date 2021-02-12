@@ -37,3 +37,6 @@ app.addController('snack'
 
 app.serve();
 ```
+
+## Examples 
+Example projects using *snackend* can be found [here](https://https://github.com/jammartin/snackend-examples).

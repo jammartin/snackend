@@ -75,8 +75,8 @@ describe('Chefs-API', function() {
                 speciality: String
             }))
             .useEndpointTemplate('create')
-            .useEndpointTemplate('retrieveOneBy', 'name')
-            .useEndpointTemplate('retrieveOneRandom')
+            .useEndpointTemplate('findOneBy', 'name')
+            .useEndpointTemplate('findOneRandom')
             .useEndpointTemplate('downloadOneFileBy', 'id')
             .useEndpointTemplate('findByQuery');
         await app.serve();
@@ -104,10 +104,10 @@ describe('Chefs-API', function() {
             });
         });
 
-        describe('#retrieveOneBy()', function(){
+        describe('#findOneBy()', function(){
             it('should retrieve a specific document by the provided field', async function(){
                const res = await chai.request(server)
-                   .get('/chefs/retrieve/one/by/name')
+                   .get('/chefs/find/one/by/name')
                    .type('form')
                    .field({name: 'Jam'});
 
@@ -121,10 +121,10 @@ describe('Chefs-API', function() {
             });
         });
 
-        describe('#retrieveOneRandom()', function(){
+        describe('#findOneRandom()', function(){
            it('should retrieve a random document', async function(){
                const res = await chai.request(server)
-                   .get('/chefs/retrieve/one/random');
+                   .get('/chefs/find/one/random');
 
                res.should.have.status(200);
                res.body.should.have.property('name');
